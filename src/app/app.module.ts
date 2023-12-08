@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './components/home/home.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { ArticulosComponent } from './components/articulos/articulos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IonicModule.forRoot({})
+    IonicModule.forRoot({}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
