@@ -1,33 +1,100 @@
-
 .productos-content {
 
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 1%;
+    background-color: #E1EBEE;
 }
 
 .producto {
-    background-color: rgb(214, 209, 209);
-    margin: 2px ;
+    background-color: white;
+    margin: 2px;
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+
+
 
     .img-producto {
-        .imagen{
-            border-radius: 5px;
+        .imagen {
+            border-radius: 5px 5px 0px 0px;
             height: 250px;
             width: 100%;
         }
     }
 
-    .nombre-producto{
+    .nombre-producto {
         color: black;
+        padding: 0% 5% 0% 5%;
+        font-size: 15px;
+
+        .nombre {
+            margin: 0px;
+            height: 50px;
+        }
     }
 
-    .descuento{
-        color: green;
+    .contenedor-descuento-precio {
+        display: flex;
+        justify-content: space-between;
+        padding: 5% 5% 0% 5%;
+
+        font-family: 'Poppins', sans-serif;
+
+
+        .separador{
+            display: flex;
+
+
+            .descuento-producto {
+                font-size: 10px;
+                color: green;
+    
+                p {
+                    margin: 0px;
+                }
+            }
+    
+            .precio-producto {
+                color: orange;
+                margin-right: 5px;
+                font-size: 20px;
+    
+                p {
+                    margin: 0px;
+                }
+            }
+        }
+
+        .btn-agregar-carrito{
+            font-size: 25px;
+            color: orange;
+
+
+        }
+
+        
+
+
+
+
     }
 
-    .precio{
-        color: orange;
+
+
+}
+
+//Cambios responsive para pantallas que tengan minimo 400px de ancho
+@media screen and (min-width: 400px) {
+    .productos-content {
+        grid-template-columns: repeat(3, 1fr);
     }
+
+}
+
+//Cambios responsive para pantallas que tengan minimo 1000px de ancho
+@media screen and (min-width: 1000px) {
+    .productos-content {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
 }
