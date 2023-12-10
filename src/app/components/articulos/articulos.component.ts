@@ -8,16 +8,21 @@ import { ProductosService } from 'src/app/services/productos/productos.service';
 })
 export class ArticulosComponent implements OnInit {
 
-  constructor(private productosService: ProductosService) { }
+  productos:any;
+
+  constructor(private productosService: ProductosService) {
+    this.productos = [];
+   }
 
   ngOnInit() {
-   // this.obtenerTodosLosProductos();
+   this.obtenerTodosLosProductos();
   }
-/*
+  
+//Obtener todos los productos registrados en la base de datos 
   obtenerTodosLosProductos() {
     this.productosService.getProductos().subscribe((response) => {
       if (response) {
-        console.log(response);
+        this.productos = response;
       }
     }, (error) => {
       if (error.status === 403) {
@@ -27,7 +32,7 @@ export class ArticulosComponent implements OnInit {
       }
     })
   }
-  */
+  
 
 
 
