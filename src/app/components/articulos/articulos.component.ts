@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService } from 'src/app/services/productos/productos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-articulos',
@@ -10,7 +11,7 @@ export class ArticulosComponent implements OnInit {
 
   productos:any;
 
-  constructor(private productosService: ProductosService) {
+  constructor(private productosService: ProductosService, private router:Router) {
     this.productos = [];
    }
 
@@ -31,6 +32,10 @@ export class ArticulosComponent implements OnInit {
         alert("No se encontraron resultados");
       }
     })
+  }
+
+  irDetalleProducto(id:number){
+    this.router.navigate([`detalle-producto/${id}`]);
   }
   
 

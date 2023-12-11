@@ -6,13 +6,15 @@ import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './components/home/home.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
 import { HttpClientModule } from '@angular/common/http'; 
+import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ArticulosComponent
+    ArticulosComponent,
+    DetalleProductoComponent
   ],
   imports: [
     BrowserModule,

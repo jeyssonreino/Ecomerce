@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/articulos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Aesthetic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="imagenes-content">
+    <div scrollY="true" class="imagenes">
+      <img class="imagen" src="{{ producto.imagenPrincipal }}" alt="" />
+      <img class="imagen" src="{{ producto.imagen2 }}" alt="" />
+      <img class="imagen" src="{{ producto.imagen3 }}" alt="" />
+      <img class="imagen" src="{{ producto.imagen4 }}" alt="" />
+    </div>
+  </div>
+  <div class="informacion-content">
+    <div class="flex">
+      <div class="precio-container">
+        <p class="precio">
+          {{ producto.precio | currency : "USD" : "symbol" : "1.0-0" }}
+        </p>
+      </div>
+      <div class="descuento-container">
+        <p class="descuento">-{{ producto.descuento }}%</p>
+      </div>
+    </div>
+    <div class="nombre-container">
+      <p class="nombre">{{ producto.nombre }}</p>
+    </div>
+    <div class="descripcion-container">
+      <p class="descripcion">{{ producto.descripcion }}</p>
+    </div>
+    <div class="tallas-container">
+      <p class="tallas">Tallas: {{ producto.talla }}</p>
+    </div>
+    <div class="genero-container">
+      <p class="genero">Sexo: {{ producto.genero }}</p>
+    </div>
+    <div class="marca-container">
+      <p class="marca">Marca: {{ producto.marca }}</p>
+    </div>
+    <div class="tipomaterial-container">
+      <p class="tipomaterial">Material de fabricación: {{ producto.tipoMaterial }}</p>
+    </div>
+    <ion-button class="btn-añadir-al-carrito">Añadir al carrito</ion-button>
+  </div>
+
+</ion-content>
