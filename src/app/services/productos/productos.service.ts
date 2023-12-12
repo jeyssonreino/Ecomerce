@@ -23,4 +23,10 @@ export class ProductosService {
       const url = this.api + `/obtener-producto/${id}`;
       return  this.http.get(url);
     }
+
+    //Srevicio para guardar un pedido(Carrito) en la base de datos pasandole el Id del producto y el Id del usuario
+    savePedido(datos:any){
+      const url = this.api + '/registrar-pedido';
+      return this.http.post(url,datos);
+    }
 }

@@ -5,8 +5,11 @@ import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './components/home/home.component';
 import { ArticulosComponent } from './components/articulos/articulos.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http'; 
+import { AuthInterceptor } from './helpers/auth.interceptor';
 import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,15 +17,21 @@ import { DetalleProductoComponent } from './components/detalle-producto/detalle-
     AppComponent,
     HomeComponent,
     ArticulosComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IonicModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="formulario-login-container">
+    <div class="img-profile">
+      <ion-icon name="person-circle-outline" class="icon"></ion-icon>
+    </div>
+    
+    <ion-item>
+      <ion-input  placeholder="Correo" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" value="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="iniciarSession()">Entrar</ion-button>
+    <ion-button expand="block" fill="outline">Registrarse</ion-button>
+  </div>
+</ion-content>
