@@ -29,4 +29,16 @@ export class ProductosService {
       const url = this.api + '/registrar-pedido';
       return this.http.post(url,datos);
     }
+
+    //Servico para consultar el carrito de un usuario por su Id
+    getCarritoById(idUser:any){
+      const url = this.api + `/obtener-carrito/${idUser}`;  
+      return this.http.get(url);
+    }
+
+    //Servicio para eliminar un articulo del carrito por el Id del articulo
+    deleteCarritoById(id:number){
+      const url = this.api + `/eliminar-pedido/${id}`
+      return this.http.delete(url);
+    }
 }

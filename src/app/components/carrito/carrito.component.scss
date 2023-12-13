@@ -1,0 +1,52 @@
+.carrito-container {
+    padding: 5%;
+
+    .titulo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .titulo {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+
+        }
+    }
+
+    .articulo-container {
+        .container {
+            padding: 1%;
+            display: flex;
+            justify-content: space-between;
+
+            .imagen-articulo {
+                .imagen {
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+            .informacion{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .nombre{
+                    margin: 0;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 10px;
+
+                }
+                .precio{
+                    margin: 0;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20px;
+
+                }
+                .btn-eliminar{
+
+                }
+            }
+        }
+
+
+    }
+}

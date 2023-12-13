@@ -10,6 +10,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
 import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ArticulosComponent,
     DetalleProductoComponent,
-    LoginComponent
+    LoginComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

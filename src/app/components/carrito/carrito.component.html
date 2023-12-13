@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Carrito</ion-title>
+    <ion-buttons slot="end">
+      <ion-button><ion-icon name="person-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito"
+        ><ion-icon name="cart-outline"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="carrito-container">
+      <div class="titulo-container">
+        <p class="titulo">Articulos en el carrito</p>
+        <ion-button color="success">Comprar</ion-button>
+      </div>
+
+      <div class="articulo-container" *ngFor="let articulo of articulosCarrito">
+        <ion-card class="container">
+          <div class="imagen-articulo">
+            <img class="imagen"
+              src="{{articulo.imagenPrincipal}}"
+              alt=""
+            />
+          </div>
+          <div class="informacion">
+            <div class="nombre">{{articulo.nombreProducto}}</div>
+            <div class="precio">{{articulo.precioProducto | currency : "USD" : "symbol" : "1.0-0"}}</div>
+            <ion-button class="btn-eliminar" fill="clear" (click)="eliminarDelCarrito(articulo.idPedido)" >Quitar</ion-button>
+          </div>
+        </ion-card>
+      </div>
+
+  </div>
+
+  
+</ion-content>
