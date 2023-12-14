@@ -41,4 +41,10 @@ export class ProductosService {
       const url = this.api + `/eliminar-pedido/${id}`
       return this.http.delete(url);
     }
+
+    //Sertvicio para agregar un detalles del pedido
+    saveDetallesPedido(datos:any){
+      const url = this.api + '/registrar-detallepedido';
+      return this.http.post(url,datos);
+    }
 }

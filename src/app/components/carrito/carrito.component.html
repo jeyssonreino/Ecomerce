@@ -19,7 +19,7 @@
   <div class="carrito-container">
       <div class="titulo-container">
         <p class="titulo">Articulos en el carrito</p>
-        <ion-button color="success">Comprar</ion-button>
+        <ion-button color="success" (click)="setOpen(true)"  >Comprar</ion-button>
       </div>
 
       <div class="articulo-container" *ngFor="let articulo of articulosCarrito">
@@ -33,12 +33,58 @@
           <div class="informacion">
             <div class="nombre">{{articulo.nombreProducto}}</div>
             <div class="precio">{{articulo.precioProducto | currency : "USD" : "symbol" : "1.0-0"}}</div>
-            <ion-button class="btn-eliminar" fill="clear" (click)="eliminarDelCarrito(articulo.idPedido)" >Quitar</ion-button>
+            <ion-button class="btn-eliminar" fill="clear" *ngIf="articulo.idDetallePedido === null" (click)="eliminarDelCarrito(articulo.idPedido)" >Quitar</ion-button>
+            <div class="aviso-comprado" *ngIf="articulo.idDetallePedido != null"> 
+              <p class="aviso">Comprado</p>
+            </div>
           </div>
         </ion-card>
       </div>
-
   </div>
+
+
+  <ion-modal [isOpen]="isModalOpen" class="modalComprar">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Pedido</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Cancelar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        <div class="mensaje-al-comprador">
+          <h1 class="mensaje">¡Ya casi!, Regalanos tu información para entragarte el pedido</h1>
+        </div>
+        <div class="Total">
+          <p></p>
+
+        </div>
+
+        <ion-list>
+          <form action="">
+          <ion-item>
+            <ion-select label="Forma de pago" [(ngModel)]="formaPago" name="formaPago">
+              <ion-select-option value="EFECTIVO" >Efectivo-Contraentrega</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-select label="Ciudad" [(ngModel)]="ciudad" name="ciudad">
+              <ion-select-option value="Sahagún,Córdoba,Colombia" >Sahagún,Córdoba,Colombia</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-input  placeholder="Escribe tu dirección excata" [(ngModel)]="direccion" name="direccion"></ion-input>
+          </ion-item>
+          <ion-button expand="block" (click)="agregarDetallePedido()">Realizar compra</ion-button>
+        </form>
+        </ion-list>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 
   
 </ion-content>

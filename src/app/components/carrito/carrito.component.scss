@@ -44,9 +44,36 @@
                 .btn-eliminar{
 
                 }
+
+                .aviso-comprado{
+                    .aviso{
+                        margin: 0;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 15px;
+                        color: greenyellow;
+                    }
+                }
             }
         }
 
 
+    }
+}
+
+.modalComprar{
+    .ion-padding{
+        .mensaje-al-comprador{
+            .mensaje{
+
+                
+                margin: 0;
+                padding: 2%;
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+                
+            }
+
+
+        }
     }
 }
