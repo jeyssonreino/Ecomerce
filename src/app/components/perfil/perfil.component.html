@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/perfil"><ion-icon name="person-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito"><ion-icon name="cart-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="img-profile">
+    <ion-icon name="person-circle-outline" class="icon"></ion-icon>
+  </div>
+  <div class="informacion">
+    <div class="nombre-completo">
+      <p class="nombre">Nombre: {{usuario.nombre1 + " " + usuario.nombre2 + " " + usuario.apellido1 + " " + usuario.apellido2}}</p>
+    </div>
+    <div class="correo-container">
+      <p class="correo">Email: {{ usuario.correo }}</p>
+    </div>
+    <div class="fecha-nacimiento">
+      <p class="fecha">Fecha de nacimiento: {{ usuario.fechaNacimiento }}</p>
+    </div>
+    <div class="sexo-container">
+      <p class="sexo" *ngIf="usuario.sexo === 'M'">Sexo: Masculino</p>
+      <p class="sexo" *ngIf="usuario.sexo === 'F'">Sexo: Femenino</p>
+      <p class="sexo" *ngIf="usuario.sexo === 'O'">Sexo: Otro</p>
+    </div>
+    <div class="telefono-container">
+      <p class="telefono">Número de celular: {{ usuario.telefono }}</p>
+    </div>
+
+  </div>
+
+
+</ion-content>

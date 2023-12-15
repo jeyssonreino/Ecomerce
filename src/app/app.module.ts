@@ -11,6 +11,7 @@ import { DetalleProductoComponent } from './components/detalle-producto/detalle-
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     ArticulosComponent,
     DetalleProductoComponent,
     LoginComponent,
-    CarritoComponent
+    CarritoComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
