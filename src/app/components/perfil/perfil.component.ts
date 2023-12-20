@@ -43,6 +43,13 @@ export class PerfilComponent  implements OnInit {
     })
   }
 
+  logout(){
+    this.loginService.eliminarIdUser();
+    this.loginService.eliminarEmailUser();
+    this.loginService.eliminarToken()
+    this.router.navigate(["/login"]);
+  }
+
 
 
 }

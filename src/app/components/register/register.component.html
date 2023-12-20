@@ -1,3 +1,55 @@
-<p>
-  register works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="formulario-register-container">
+
+    <div class="titulo-container">
+      <h1 class="tirulo">Registrate con tus datos</h1>
+
+    </div>
+
+    
+    <ion-item>
+      <ion-input  placeholder="Primer nombre" [(ngModel)]="nombre1" name="nombre1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  placeholder="Segundo nombre" [(ngModel)]="nombre2" name="nombre2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  placeholder="Primer apellido" [(ngModel)]="apellido1" name="apellido1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  placeholder="Segundo apellido" [(ngModel)]="apellido2" name="apellido2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <input type="date" [(ngModel)]="fechaNacimiento" name="fechaNacimiento">
+    </ion-item>  
+    <ion-item>
+      <ion-select label="Sexo" [(ngModel)]="sexo" name="sexo">
+        <ion-select-option value="M">Masculino</ion-select-option>
+        <ion-select-option value="F">Femenino</ion-select-option>
+        <ion-select-option value="O">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input  placeholder="Número de celular" [(ngModel)]="telefono" name="telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  placeholder="Correo" [(ngModel)]="correo" name="correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Contraseña" value="Contraseña" [(ngModel)]="contrasena" name="contrasena"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Confirmar contraseña" value="Confirma la contraseña" [(ngModel)]="passwordConfirm" name="passwordConfirm"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="registrar()">Registrar</ion-button>
+  </div>
+</ion-content>

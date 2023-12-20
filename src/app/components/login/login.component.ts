@@ -30,6 +30,10 @@ export class LoginComponent  implements OnInit {
     })
   }
 
+  redireccionarRegister(){
+    this.router.navigate(["/register"])
+  }
+
 
 
 

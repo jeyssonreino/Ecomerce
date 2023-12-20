@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     DetalleProductoComponent,
     LoginComponent,
     CarritoComponent,
-    PerfilComponent
+    PerfilComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

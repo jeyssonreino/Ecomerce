@@ -35,4 +35,16 @@ export class LoginService {
   obtenerIdUsuario(){
     return localStorage.getItem('idUser');
   }
+
+  eliminarToken(){
+    localStorage.removeItem('token');
+  }
+
+  eliminarIdUser(){
+    localStorage.removeItem('idUser');
+  }
+
+  eliminarEmailUser(){
+    localStorage.removeItem('email');
+  }
 }

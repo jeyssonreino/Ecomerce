@@ -15,4 +15,9 @@ export class UsuarioService {
     const url = this.api + `/obtener-usuario/${id}`;
     return this.http.get(url);
   }
+
+  saveUsuario(datos:any){
+    const url = this.api + '/registrar-usuario';
+    return this.http.post(url,datos);
+  }
 }
