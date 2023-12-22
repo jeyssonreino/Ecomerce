@@ -1,27 +1,18 @@
-# EcomerceHibrido
+# Sistema para clientes de tienda virtual  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+El sistema permite a los clientes de la tienda virtual ver los productos, comprarlos, hacer multiples pedidos, agregarlos al carrito, regitrarse, iniciar sesión. 
+Desarrollado en Angular+IONIC basado en una arquitectura hibrida, para cualquier sistema operativo movil como: Android y IOS.
 
-## Development server
+El sistema se comunica con una aplicación Backend alojada en un servidor para ser uso de sus servicios y procesos la cual tambien se cominica con una base de datos MySQL,
+en donde persiste las información.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<a href="https://postimg.cc/pynSdTKy" target="_blank"><img src="https://i.postimg.cc/pynSdTKy/Captura-de-pantalla-2023-12-22-160309.png" alt="Captura-de-pantalla-2023-12-22-160309"/></a> <a href="https://postimg.cc/XpSzBbgL" target="_blank"><img src="https://i.postimg.cc/XpSzBbgL/Captura-de-pantalla-2023-12-22-160337.png" alt="Captura-de-pantalla-2023-12-22-160337"/></a> <a href="https://postimg.cc/zbHx3tb4" target="_blank"><img src="https://i.postimg.cc/zbHx3tb4/Captura-de-pantalla-2023-12-22-160529.png" alt="Captura-de-pantalla-2023-12-22-160529"/></a> <a href="https://postimg.cc/5QcnzB8y" target="_blank"><img src="https://i.postimg.cc/5QcnzB8y/Captura-de-pantalla-2023-12-22-160602.png" alt="Captura-de-pantalla-2023-12-22-160602"/></a><br/><br/>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
