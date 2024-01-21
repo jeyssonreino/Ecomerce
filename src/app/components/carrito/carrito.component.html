@@ -32,7 +32,8 @@
           </div>
           <div class="informacion">
             <div class="nombre">{{articulo.nombreProducto}}</div>
-            <div class="precio">{{articulo.precioProducto | currency : "USD" : "symbol" : "1.0-0"}}</div>
+            <div class="precio">{{ articulo.cantidad * (articulo.precioProducto - ((articulo.precioProducto * articulo.descuentoProducto)/100)) | currency : "USD" : "symbol" : "1.0-0"}}</div>
+            <div class="cantidad">Unidades: {{articulo.cantidad}}</div>
             <ion-button class="btn-eliminar" fill="clear" *ngIf="articulo.idDetallePedido === null" (click)="eliminarDelCarrito(articulo.idPedido)" >Quitar</ion-button>
             <div class="aviso-comprado" *ngIf="articulo.idDetallePedido != null"> 
               <p class="aviso">Comprado</p>

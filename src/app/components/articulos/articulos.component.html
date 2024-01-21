@@ -26,9 +26,9 @@
       <div class="contenedor-descuento-precio">
         <div class="separador">
           <div class="precio-producto">
-            <p>{{ producto.precio | currency:'USD':'symbol':'1.0-0' }}</p>
+            <p>{{ producto.precio - ((producto.precio * producto.descuento)/100) | currency:'USD':'symbol':'1.0-0' }}</p>
           </div>
-          <div class="descuento-producto" *ngIf="producto.descuento != 0">
+          <div class="descuento-producto" *ngIf="producto.descuento !== 0">
             <p>-{{ producto.descuento }}%</p>
           </div>
         </div>
@@ -39,6 +39,7 @@
     </div> 
 
   </div>
+
 
 
 </ion-content>

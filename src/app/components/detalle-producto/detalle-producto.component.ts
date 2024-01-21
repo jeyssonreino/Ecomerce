@@ -13,6 +13,7 @@ export class DetalleProductoComponent implements OnInit {
 
   id: string = "";
   producto: any;
+  cantidad:number= 1;
 
   constructor(private productoService: ProductosService,
     private router: Router,
@@ -49,7 +50,8 @@ export class DetalleProductoComponent implements OnInit {
       let idUsuario = this.loginService.obtenerIdUsuario();
       let datos = {
         idProducto: this.id,
-        idUsuario: idUsuario
+        idUsuario: idUsuario,
+        cantidad: this.cantidad
       }
       this.productoService.savePedido(datos).subscribe((response) => {
         if (response) {
@@ -78,6 +80,18 @@ export class DetalleProductoComponent implements OnInit {
       buttons: ['OK'],
     });
     await alert.present();
+  }
+
+  incrementarCantidad(){
+    if(this.cantidad < this.producto.cantidad){
+      this.cantidad++;
+    }
+  }
+
+  decrementarCantidad(){
+    if(this.cantidad > 1){
+      this.cantidad--;
+    }
   }
 
 

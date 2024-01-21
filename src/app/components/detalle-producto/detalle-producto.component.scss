@@ -43,6 +43,15 @@
         }
     }
 
+    .cantidad-container{
+
+        margin: 0px 100px 0px 100px;
+
+        display: flex;
+        justify-content: space-around;
+
+    }
+
     .descripcion-container{
         padding: 5px 6% 5px 6%;
         .descripcion{

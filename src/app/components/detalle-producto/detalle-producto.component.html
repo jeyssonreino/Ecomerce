@@ -26,7 +26,7 @@
     <div class="flex">
       <div class="precio-container">
         <p class="precio">
-          {{ producto.precio | currency : "USD" : "symbol" : "1.0-0" }}
+          {{ (producto.precio - ((producto.precio * producto.descuento)/100))*cantidad | currency : "USD" : "symbol" : "1.0-0" }}
         </p>
       </div>
       <div class="descuento-container">
@@ -35,6 +35,9 @@
     </div>
     <div class="nombre-container">
       <p class="nombre">{{ producto.nombre }}</p>
+    </div>
+    <div class="cantidad-container">
+      <ion-button color="light" (click)="decrementarCantidad()">-</ion-button> <p>{{cantidad}}</p> <ion-button (click)="incrementarCantidad()" color="success">+</ion-button>
     </div>
     <div class="descripcion-container">
       <p class="descripcion">{{ producto.descripcion }}</p>
@@ -52,6 +55,8 @@
       <p class="tipomaterial">Material de fabricación: {{ producto.tipoMaterial }}</p>
     </div>
     <ion-button class="btn-añadir-al-carrito" (click)="agregarAlCarrito()">Agregar al carrito</ion-button>
+  </div>
+  <div>
   </div>
 
 </ion-content>

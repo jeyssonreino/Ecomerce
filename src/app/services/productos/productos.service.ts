@@ -14,7 +14,7 @@ export class ProductosService {
 
     //Servicio para obtener todas los productos registrados en la base de datos
     getProductos() {
-      const url = this.apiExample  /* + "/obtener-productos"*/;
+      const url = this.api + "/obtener-productos";
       return this.http.get(url);
     }
 
